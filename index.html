@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Currículo e portfólio de Gustavo Gonçalves - estudante de Análise e Desenvolvimento de Sistemas.">
+    <title>Gustavo Gonçalves | Currículo & Portfólio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #6c63ff;
+            --dark: #111827;
+            --muted: #6b7280;
+            --light: #f5f7fb;
+        }
+
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background: #fff;
+        }
+
+        .navbar {
+            background: rgba(17, 24, 39, .96);
+            backdrop-filter: blur(8px);
+        }
+
+        .hero {
+            min-height: 92vh;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at 80% 20%, rgba(108,99,255,.25), transparent 35%),
+                linear-gradient(135deg, #111827 0%, #1f2937 100%);
+            color: white;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            padding: .5rem 1rem;
+            border: 1px solid rgba(255,255,255,.2);
+            border-radius: 50px;
+            color: #ddd9ff;
+            background: rgba(255,255,255,.06);
+            margin-bottom: 1.2rem;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.7rem, 7vw, 5rem);
+            font-weight: 800;
+            letter-spacing: -2px;
+        }
+
+        .hero h1 span { color: #8b84ff; }
+
+        .hero p {
+            max-width: 680px;
+            color: #d1d5db;
+            font-size: 1.1rem;
+        }
+
+        .btn-primary-custom {
+            background: var(--primary);
+            border: none;
+            color: white;
+            padding: .8rem 1.3rem;
+            border-radius: 10px;
+            font-weight: 600;
+        }
+
+        .btn-primary-custom:hover {
+            background: #574ff0;
+            color: white;
+        }
+
+        section { padding: 90px 0; }
+        .section-title { font-weight: 800; margin-bottom: .6rem; }
+        .section-subtitle { color: var(--muted); margin-bottom: 2.5rem; }
+
+        .soft-bg { background: var(--light); }
+
+        .card-custom {
+            border: 1px solid #e5e7eb;
+            border-radius: 18px;
+            padding: 1.5rem;
+            height: 100%;
+            background: white;
+            transition: .25s ease;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(17,24,39,.08);
+        }
+
+        .icon-box {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            background: #eeecff;
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .skill {
+            display: inline-block;
+            background: #eeecff;
+            color: #4d46bd;
+            padding: .55rem .85rem;
+            border-radius: 50px;
+            margin: .3rem;
+            font-size: .9rem;
+            font-weight: 600;
+        }
+
+        .timeline {
+            border-left: 3px solid #dedbff;
+            padding-left: 1.5rem;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            width: 13px;
+            height: 13px;
+            background: var(--primary);
+            border-radius: 50%;
+            left: -1.98rem;
+            top: .35rem;
+        }
+
+        .project-link {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .project-link:hover { text-decoration: underline; }
+
+        footer {
+            background: var(--dark);
+            color: #d1d5db;
+            padding: 35px 0;
+        }
+
+        .contact-card {
+            background: var(--dark);
+            color: white;
+            border-radius: 22px;
+            padding: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero { min-height: 85vh; }
+            section { padding: 65px 0; }
+            .contact-card { padding: 2rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#inicio">GG.</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link" href="#formacao">Formação</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experiencia">Experiência</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="hero" id="inicio">
+    <div class="container">
+        <span class="hero-badge">Estudante de ADS • Tecnologia • Desenvolvimento</span>
+        <h1>Olá, eu sou<br><span>Gustavo Gonçalves.</span></h1>
+        <p class="mt-4">
+            Estudante de Análise e Desenvolvimento de Sistemas no IFSP,
+            interessado em tecnologia, desenvolvimento de software e soluções digitais.
+        </p>
+
+        <div class="mt-4 d-flex gap-3 flex-wrap">
+            <a href="#projetos" class="btn btn-primary-custom">Ver projetos</a>
+            <a href="#contato" class="btn btn-outline-light px-4 py-2">Entrar em contato</a>
+        </div>
+    </div>
+</header>
+
+<section id="sobre">
+    <div class="container">
+        <h2 class="section-title">Sobre mim</h2>
+        <p class="section-subtitle">Perfil profissional e objetivos</p>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <p class="fs-5">
+                    Sou estudante de <strong>Análise e Desenvolvimento de Sistemas no IFSP</strong>,
+                    com interesse em construir uma carreira na área de Tecnologia da Informação.
+                    Busco desenvolver meus conhecimentos em programação, desenvolvimento de software,
+                    suporte e ferramentas utilizadas no mercado.
+                </p>
+                <p class="text-secondary">
+                    Tenho experiência profissional com atendimento ao cliente e operação de caixa,
+                    desenvolvendo características como organização, responsabilidade, agilidade,
+                    comunicação e trabalho em equipe. Atualmente, estou direcionando essa experiência
+                    para uma trajetória profissional na área de tecnologia.
+                </p>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card-custom">
+                    <div class="icon-box">01</div>
+                    <h5>Objetivo profissional</h5>
+                    <p class="text-secondary mb-0">
+                        Busco uma oportunidade para iniciar ou desenvolver minha carreira em TI,
+                        colocando em prática meus conhecimentos e aprendendo continuamente.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="formacao" class="soft-bg">
+    <div class="container">
+        <h2 class="section-title">Formação</h2>
+        <p class="section-subtitle">Minha trajetória acadêmica</p>
+
+        <div class="row g-4">
+            <div class="col-md-8">
+                <div class="card-custom">
+                    <div class="icon-box">🎓</div>
+                    <h4>Análise e Desenvolvimento de Sistemas</h4>
+                    <h6 class="text-primary mt-2">Instituto Federal de São Paulo — IFSP</h6>
+                    <p class="text-secondary mt-3 mb-0">
+                        Formação superior voltada ao desenvolvimento de sistemas,
+                        programação, banco de dados, engenharia de software e fundamentos de tecnologia.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card-custom">
+                    <div class="icon-box">✓</div>
+                    <h5>Ensino Médio</h5>
+                    <p class="text-secondary mb-0">
+                        Ensino Médio concluído.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experiencia">
+    <div class="container">
+        <h2 class="section-title">Experiência profissional</h2>
+        <p class="section-subtitle">Experiência e competências desenvolvidas</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <h4>Operador de Caixa</h4>
+                <h6 class="text-primary">Experiência profissional • 1 ano e 9 meses</h6>
+                <p class="text-secondary mt-2">
+                    Atendimento ao cliente, registro de produtos, processamento de pagamentos,
+                    abertura e fechamento de caixa e organização das atividades do setor.
+                </p>
+                <p class="mb-0">
+                    <strong>Competências desenvolvidas:</strong>
+                    atendimento, responsabilidade, organização, agilidade, comunicação e trabalho em equipe.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="cursos" class="soft-bg">
+    <div class="container">
+        <h2 class="section-title">Cursos complementares</h2>
+        <p class="section-subtitle">Conhecimentos adicionais</p>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card-custom">
+                    <div class="icon-box">TI</div>
+                    <h5>Analista de Suporte Técnico</h5>
+                    <p class="text-secondary mb-0">Carga horária: 132 horas</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card-custom">
+                    <div class="icon-box">PC</div>
+                    <h5>Informática</h5>
+                    <p class="text-secondary mb-0">Carga horária: 100 horas</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <p class="section-subtitle">Conhecimentos técnicos e competências pessoais</p>
+
+        <div class="row g-5">
+            <div class="col-lg-6">
+	            </div>
+
+            <div class="col-lg-6">
+                <h5 class="mb-3">Soft Skills</h5>
+                <div>
+                    <span class="skill">Organização</span>
+                    <span class="skill">Responsabilidade</span>
+                    <span class="skill">Agilidade</span>
+                    <span class="skill">Comunicação</span>
+                    <span class="skill">Trabalho em equipe</span>
+                    <span class="skill">Aprendizado contínuo</span>
+                    <span class="skill">Atendimento ao cliente</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projetos" class="soft-bg">
+    <div class="container">
+        <h2 class="section-title">Projetos</h2>
+        <p class="section-subtitle">Projetos acadêmicos e pessoais</p>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card-custom">
+                    <div class="icon-box">C</div>
+                    <h5>Exercícios de Programação em C</h5>
+                    <p class="text-secondary">
+                        Programas desenvolvidos durante os estudos de programação,
+                        envolvendo estruturas condicionais, variáveis, cálculos e lógica.
+                    </p>
+                    <a class="project-link" href="https://github.com/Gustavo202021" target="_blank">
+                        Ver no GitHub →
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card-custom">
+                    <div class="icon-box">WEB</div>
+                    <h5>Currículo Web</h5>
+                    <p class="text-secondary">
+                        Página pessoal desenvolvida com HTML, CSS e Bootstrap
+                        e publicada utilizando GitHub Pages.
+                    </p>
+                    <a class="project-link" href="https://github.com/" target="_blank">
+                        GitHub →
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="alert alert-light border mt-4">
+            <strong>Importante:</strong>
+        </div>
+    </div>
+</section>
+
+<section id="contato">
+    <div class="container">
+        <div class="contact-card">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold">Vamos conversar?</h2>
+                    <p class="text-white-50 mb-0">
+                        Estou aberto a oportunidades de estágio, trabalho e projetos
+                        relacionados à área de tecnologia.
+                    </p>
+                </div>
+
+                <div class="col-lg-4 text-lg-end">
+                    <a href="malito:gustavoogg922@gmail.com" class="btn btn-light fw-semibold">
+                        Enviar e-mail
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container text-center">
+        <p class="mb-1">Gustavo Gonçalves • Currículo & Portfólio</p>
+        <small>Desenvolvido com HTML, CSS e Bootstrap • GitHub Pages</small>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
